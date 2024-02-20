@@ -8,7 +8,9 @@ type Props = {
 
 export default function Checkbox({ label, onClick, isChecked = false }: Props) {
   const [localIsChecked, setLocalIsChecked] = useState(isChecked)
-  const labelStyles = localIsChecked ? 'text-brandAccent' : 'text-gray-800'
+  const labelStyles = localIsChecked
+    ? 'text-brandAccent font-medium'
+    : 'text-gray-800'
 
   function handleOnClick() {
     setLocalIsChecked(!localIsChecked)
@@ -25,7 +27,7 @@ export default function Checkbox({ label, onClick, isChecked = false }: Props) {
       />
       <label
         htmlFor="showDetails"
-        className={`font-medium text-sm sm:text-base ${labelStyles}`}
+        className={`text-sm sm:text-base ${labelStyles}`}
       >
         {label}
       </label>
