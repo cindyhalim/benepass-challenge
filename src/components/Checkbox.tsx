@@ -3,14 +3,15 @@ import { useState } from 'react'
 type Props = {
   label: string
   onClick: () => void
+  isChecked?: boolean
 }
 
-export default function Checkbox({ label, onClick }: Props) {
-  const [isChecked, setIsChecked] = useState(false)
-  const labelStyles = isChecked ? 'text-brandAccent' : 'text-gray-800'
+export default function Checkbox({ label, onClick, isChecked = false }: Props) {
+  const [localIsChecked, setLocalIsChecked] = useState(isChecked)
+  const labelStyles = localIsChecked ? 'text-brandAccent' : 'text-gray-800'
 
   function handleOnClick() {
-    setIsChecked(!isChecked)
+    setLocalIsChecked(!localIsChecked)
     onClick()
   }
 
@@ -22,7 +23,10 @@ export default function Checkbox({ label, onClick }: Props) {
         name="showDetails"
         className="relative size-6 bg-white rounded-md appearance-none peer border-grey border-[1px] checked:bg-brandAccent checked:border-none"
       />
-      <label htmlFor="showDetails" className={`font-medium ${labelStyles}`}>
+      <label
+        htmlFor="showDetails"
+        className={`font-medium text-sm sm:text-base ${labelStyles}`}
+      >
         {label}
       </label>
       <span className="absolute ml-[6px] pointer-events-none">
