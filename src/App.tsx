@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import Button from './components/Button'
 import Custom from './features/Custom'
-import Example from './Example'
+import Example from './features/Example'
 
 type Page = 'example' | 'custom'
 
