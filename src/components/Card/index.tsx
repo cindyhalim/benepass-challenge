@@ -30,7 +30,7 @@ export default function Card({
     <div className="min-h-[200px] min-w-[275px] max-w-[395px] max-h-[272-px] flex flex-col relative">
       <img
         alt="Card background"
-        src="/src/assets/card-background.png"
+        src="/assets/card-background.png"
         className="absolute rounded-lg shadow-xl size-full"
       />
       <div className="relative flex flex-col h-full gap-4 p-6 xs:gap-5 sm:gap-6">

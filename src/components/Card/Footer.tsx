@@ -15,7 +15,7 @@ export default function Footer({ zipCode }: Props) {
       </p>
       <img
         alt="VISA logo"
-        src="src/assets/visa.png"
+        src="/assets/visa.png"
         className="absolute w-1/6 bottom-6 right-6"
       />
     </>

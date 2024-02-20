@@ -16,7 +16,7 @@ export default {
         lg: '20px',
       },
       backgroundImage: {
-        card: "url('src/assets/card-background.png')",
+        card: "url('/assets/card-background.png')",
       },
       screens: {
         xs: '350px',
